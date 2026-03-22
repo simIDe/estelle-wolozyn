@@ -395,8 +395,12 @@
           Prendre rendez-vous sur Doctolib
         </a>
       </div>
-      <form class="contact-form" name="contact" method="POST" action="mailto:{{ .Site.Params.email }}"
-        enctype="text/plain">
+      <form class="contact-form" method="POST" action="https://formsubmit.co/{{ .Site.Params.email }}">
+        <!-- Formsubmit config -->
+        <input type="hidden" name="_subject" value="Message depuis sagefemmeales.fr" />
+        <input type="hidden" name="_next" value="https://www.sagefemmeales.fr/?merci=1" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" />
         <div class="form-group">
           <label for="name">Votre nom</label>
           <input type="text" id="name" name="name" placeholder="Prénom et nom" required />
