@@ -4,7 +4,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="#accueil" class="nav-logo">
-      <img src="/images/logo.png" alt="Logo Estelle Wolozyn" onerror="this.style.display='none'" />
+      <img src="{{ "/images/logo.png" | relURL }}" alt="Logo Estelle Wolozyn" onerror="this.style.display='none'" />
       <span>Estelle Wolozyn</span>
     </a>
     <nav>
@@ -55,7 +55,7 @@
     </div>
     <div class="hero-image">
       <div class="hero-image-frame">
-        <img src="/images/image_first_section.webp" alt="Estelle Wolozyn, sage-femme" />
+        <img src="{{ "/images/image_first_section.webp" | relURL }}" alt="Estelle Wolozyn, sage-femme" />
       </div>
       <div class="hero-decor-dot hero-decor-dot--1"></div>
       <div class="hero-decor-dot hero-decor-dot--2"></div>
@@ -74,10 +74,10 @@
     <div class="about-grid">
       <div class="about-image">
         <div class="about-collage">
-          <img src="/images/photos_cabinet/IMG_1371.jpeg" alt="Cabinet" class="collage-photo" />
-          <img src="/images/photos_cabinet/IMG_1831.jpeg" alt="Cabinet" class="collage-photo" />
-          <img src="/images/photos_cabinet/IMG_1372.jpeg" alt="Cabinet" class="collage-photo" />
-          <img src="/images/photos_cabinet/IMG_1373.jpeg" alt="Cabinet" class="collage-photo" />
+          <img src="{{ "/images/photos_cabinet/IMG_1371.jpeg" | relURL }}" alt="Cabinet" class="collage-photo" />
+          <img src="{{ "/images/photos_cabinet/IMG_1831.jpeg" | relURL }}" alt="Cabinet" class="collage-photo" />
+          <img src="{{ "/images/photos_cabinet/IMG_1372.jpeg" | relURL }}" alt="Cabinet" class="collage-photo" />
+          <img src="{{ "/images/photos_cabinet/IMG_1373.jpeg" | relURL }}" alt="Cabinet" class="collage-photo" />
         </div>
       </div>
       <div class="about-content">
@@ -226,8 +226,8 @@
         <p class="section-subtitle">Des échographies adaptées à chaque situation clinique, réalisées directement au cabinet.</p>
       </div>
       <div class="echo-intro-images">
-        <img src="/images/echo.jpg" alt="Échographie" class="echo-intro-img" />
-        <img src="/images/echo_3d.jpg" alt="Échographie 3D" class="echo-intro-img" />
+        <img src="{{ "/images/echo.jpg" | relURL }}" alt="Échographie" class="echo-intro-img" />
+        <img src="{{ "/images/echo_3d.jpg" | relURL }}" alt="Échographie 3D" class="echo-intro-img" />
       </div>
     </div>
     <div class="echo-grid">
@@ -340,7 +340,7 @@
 <!-- MAP -->
 <div class="map-section">
   <div class="map-image">
-    <img src="/images/photos_cabinet/IMG_1838.jpeg" alt="Cabinet Estelle Wolozyn" />
+    <img src="{{ "/images/photos_cabinet/IMG_1838.jpeg" | relURL }}" alt="Cabinet Estelle Wolozyn" />
     <div class="map-image-overlay">
       <p class="map-image-label">Cabinet de consultation</p>
       <p class="map-image-address">19 impasse du Jujubier · 30100 Alès</p>
@@ -359,7 +359,7 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
-        <img src="/images/portrait.jpeg" alt="Estelle Wolozyn" class="contact-portrait" />
+        <img src="{{ "/images/portrait.jpeg" | relURL }}" alt="Estelle Wolozyn" class="contact-portrait" />
         <p class="section-label">Me contacter</p>
         <h2>Une question ?</h2>
         <p>Pour toute question générale, n'hésitez pas à m'écrire. Pour la prise de rendez-vous, merci d'utiliser
@@ -426,7 +426,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/images/portrait.jpeg" alt="Estelle Wolozyn" class="footer-portrait" />
+        <img src="{{ "/images/portrait.jpeg" | relURL }}" alt="Estelle Wolozyn" class="footer-portrait" />
         <p class="footer-name">Estelle Wolozyn</p>
         <p>Sage-Femme Échographiste</p>
         <p>Diplômée d'État · Alès</p>
