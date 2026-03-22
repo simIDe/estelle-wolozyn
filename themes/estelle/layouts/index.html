@@ -1,0 +1,477 @@
+{{ define "main" }}
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#accueil" class="nav-logo">
+      <img src="/images/logo.png" alt="Logo Estelle Wolozyn" onerror="this.style.display='none'" />
+      <span>Estelle Wolozyn</span>
+    </a>
+    <nav>
+      <a href="#qui-suis-je">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#echographies">Échographies</a>
+      <a href="#infos-pratiques">Infos pratiques</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="{{ .Site.Params.doctolibURL }}" target="_blank" rel="noopener" class="btn btn-primary nav-rdv">
+      Prendre rendez-vous
+    </a>
+    <button class="burger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#qui-suis-je" onclick="toggleMenu()">À propos</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#echographies" onclick="toggleMenu()">Échographies</a>
+    <a href="#infos-pratiques" onclick="toggleMenu()">Infos pratiques</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="{{ .Site.Params.doctolibURL }}" target="_blank" rel="noopener" class="btn btn-primary"
+      onclick="toggleMenu()">Prendre rendez-vous</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-pretitle">Sage-Femme Échographiste · Alès</p>
+      <h1>Estelle<br /><span>Wolozyn</span></h1>
+      <p class="hero-tagline">{{ .Site.Params.tagline }}</p>
+      <div class="hero-actions">
+        <a href="{{ .Site.Params.doctolibURL }}" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Prendre rendez-vous sur Doctolib
+        </a>
+        <a href="#qui-suis-je" class="btn btn-outline btn-large">En savoir plus</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-frame">
+        <img src="/images/image_first_section.webp" alt="Estelle Wolozyn, sage-femme" />
+      </div>
+      <div class="hero-decor-dot hero-decor-dot--1"></div>
+      <div class="hero-decor-dot hero-decor-dot--2"></div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
+    </svg>
+  </div>
+</section>
+
+<!-- QUI SUIS-JE -->
+<section class="section about" id="qui-suis-je">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="about-collage">
+          <img src="/images/photos_cabinet/IMG_1371.jpeg" alt="Cabinet" class="collage-photo" />
+          <img src="/images/photos_cabinet/IMG_1831.jpeg" alt="Cabinet" class="collage-photo" />
+          <img src="/images/photos_cabinet/IMG_1372.jpeg" alt="Cabinet" class="collage-photo" />
+          <img src="/images/photos_cabinet/IMG_1373.jpeg" alt="Cabinet" class="collage-photo" />
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-label">À propos</p>
+        <h2>Une approche centrée sur la femme</h2>
+        <p>Sage-femme diplômée d'État et échographiste, j'accompagne les femmes à chaque étape de leur vie, de
+          l'adolescence à la ménopause, avec écoute et bienveillance.</p>
+        <p>Mon cabinet est un espace rassurant où chaque femme peut être soutenue tout au long de son parcours de santé.
+          Je prends le temps d'écouter, d'expliquer et d'adapter mes soins à chaque situation personnelle.</p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🌿</div>
+            <div>
+              <strong>Écoute bienveillante</strong>
+              <p>Chaque consultation est un espace de confiance et d'échange.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🏥</div>
+            <div>
+              <strong>Suivi global</strong>
+              <p>Couvre la gynécologie de prévention, la grossesse et le suivi postnatal.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🔬</div>
+            <div>
+              <strong>Échographiste qualifiée</strong>
+              <p>Échographies gynécologiques et obstétricales sur place.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services bg-light" id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Consultations</p>
+      <h2>Mes expertises</h2>
+      <p class="section-subtitle">Des soins adaptés à chaque étape de votre vie.</p>
+      <div class="services-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span>Diplômée d'État</span>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon service-icon--teal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
+          </svg>
+        </div>
+        <h3>Gynécologie de prévention</h3>
+        <ul>
+          <li>Contraception (pilule, stérilet, implant…)</li>
+          <li>Frottis cervico-utérin</li>
+          <li>Suivi de cycles</li>
+          <li>Santé sexuelle</li>
+          <li>Échographies pelviennes</li>
+          <li>Dépistage et suivi de pathologies gynécologiques (SOPK, endométriose…)</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon service-icon--orange">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 8v4l3 3"></path>
+          </svg>
+        </div>
+        <h3>Fertilité</h3>
+        <ul>
+          <li>Suivi de cycles et ovulation</li>
+          <li>Bilan de fertilité orienté</li>
+          <li>Accompagnement et conseils</li>
+          <li>Échographies de monitorage d'ovulation</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon service-icon--mustard">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+        </div>
+        <h3>Suivi de grossesse</h3>
+        <ul>
+          <li>Consultations prénatales</li>
+          <li>Préparation à la naissance</li>
+          <li>Échographies obstétricales</li>
+          <li>Monitoring fœtal</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon service-icon--teal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <h3>Suivi postnatal</h3>
+        <ul>
+          <li>Suivi de la mère et du nouveau-né</li>
+          <li>Au cabinet ou à domicile</li>
+          <li>Visite postnatale</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon service-icon--orange">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3>Rééducation périnéale</h3>
+        <ul>
+          <li>Pour les patientes suivies pour leur grossesse au cabinet</li>
+          <li>Rééducation manuelle</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉCHOGRAPHIES -->
+<section class="section echographies" id="echographies">
+  <div class="container">
+    <div class="echo-intro">
+      <div class="echo-intro-text">
+        <p class="section-label">Imagerie médicale</p>
+        <h2>Échographies</h2>
+        <p class="section-subtitle">Des échographies adaptées à chaque situation clinique, réalisées directement au cabinet.</p>
+      </div>
+      <div class="echo-intro-images">
+        <img src="/images/echo.jpg" alt="Échographie" class="echo-intro-img" />
+        <img src="/images/echo_3d.jpg" alt="Échographie 3D" class="echo-intro-img" />
+      </div>
+    </div>
+    <div class="echo-grid">
+      <div class="echo-card">
+        <div class="echo-num">01</div>
+        <h3>Suivi de grossesse</h3>
+        <p>Échographies de datation, du premier, deuxième et troisième trimestre.</p>
+      </div>
+      <div class="echo-card">
+        <div class="echo-num">02</div>
+        <h3>Fertilité</h3>
+        <p>Bilan échographique dans le cadre du bilan de fertilité et monitorage de l'ovulation.</p>
+      </div>
+      <div class="echo-card">
+        <div class="echo-num">03</div>
+        <h3>Dépistage gynécologique</h3>
+        <p>SOPK, endométriose et autres pathologies gynécologiques.</p>
+      </div>
+      <div class="echo-card">
+        <div class="echo-num">04</div>
+        <h3>Contrôle de stérilet</h3>
+        <p>Vérification de la bonne position d'un DIU (dispositif intra-utérin).</p>
+      </div>
+      <div class="echo-card">
+        <div class="echo-num">05</div>
+        <h3>IVG / Fausse couche</h3>
+        <p>Contrôle échographique dans le suivi d'une IVG ou d'une fausse couche.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFOS PRATIQUES -->
+<section class="section infos bg-light" id="infos-pratiques">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Organisation</p>
+      <h2>Informations pratiques</h2>
+    </div>
+    <div class="infos-grid">
+      <div class="info-card info-card--featured">
+        <div class="info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </div>
+        <h3>Prise de rendez-vous</h3>
+        <p>Les rendez-vous se prennent exclusivement en ligne via Doctolib.</p>
+        <a href="{{ .Site.Params.doctolibURL }}" target="_blank" rel="noopener" class="btn btn-primary">
+          Réserver sur Doctolib
+        </a>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <h3>Adresse du cabinet</h3>
+        <p>19 impasse du Jujubier<br />30100 Alès</p>
+        <a href="{{ .Site.Params.googleMapsURL }}" target="_blank" rel="noopener" class="btn btn-outline">
+          Voir sur Google Maps
+        </a>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15z">
+            </path>
+          </svg>
+        </div>
+        <h3>Téléphone</h3>
+        <p><a href="tel:+33685185392">{{ .Site.Params.phone }}</a></p>
+        <p class="info-note">Pour les urgences uniquement.<br />Les RDV se prennent sur Doctolib.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <h3>Visites à domicile</h3>
+        <p>Le suivi postnatal peut être réalisé à votre domicile, sur la région d'Alès.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+            <line x1="1" y1="10" x2="23" y2="10"></line>
+          </svg>
+        </div>
+        <h3>Remboursement</h3>
+        <p>Conventionnée secteur 1. Les consultations sont remboursées par l'Assurance Maladie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-section">
+  <div class="map-image">
+    <img src="/images/photos_cabinet/IMG_1838.jpeg" alt="Cabinet Estelle Wolozyn" />
+    <div class="map-image-overlay">
+      <p class="map-image-label">Cabinet de consultation</p>
+      <p class="map-image-address">19 impasse du Jujubier · 30100 Alès</p>
+    </div>
+  </div>
+  <div class="map-embed">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.0!2d4.083!3d44.125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s19+impasse+du+Jujubier%2C+30100+Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" title="Localisation du cabinet"></iframe>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <img src="/images/portrait.jpeg" alt="Estelle Wolozyn" class="contact-portrait" />
+        <p class="section-label">Me contacter</p>
+        <h2>Une question ?</h2>
+        <p>Pour toute question générale, n'hésitez pas à m'écrire. Pour la prise de rendez-vous, merci d'utiliser
+          Doctolib.</p>
+        <div class="contact-details">
+          <a href="mailto:{{ .Site.Params.email }}" class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            {{ .Site.Params.email }}
+          </a>
+          <a href="tel:+33685185392" class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15z">
+              </path>
+            </svg>
+            {{ .Site.Params.phone }}
+          </a>
+          <span class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            19 impasse du Jujubier, 30100 Alès
+          </span>
+        </div>
+        <a href="{{ .Site.Params.doctolibURL }}" target="_blank" rel="noopener" class="btn btn-primary">
+          Prendre rendez-vous sur Doctolib
+        </a>
+      </div>
+      <form class="contact-form" name="contact" method="POST" action="mailto:{{ .Site.Params.email }}"
+        enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Votre nom</label>
+          <input type="text" id="name" name="name" placeholder="Prénom et nom" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Votre e-mail</label>
+          <input type="email" id="email" name="email" placeholder="votre@email.fr" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" name="subject" placeholder="Objet de votre message" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+        <p class="form-note">Pour un rendez-vous, utilisez directement <a href="{{ .Site.Params.doctolibURL }}"
+            target="_blank" rel="noopener">Doctolib</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/images/portrait.jpeg" alt="Estelle Wolozyn" class="footer-portrait" />
+        <p class="footer-name">Estelle Wolozyn</p>
+        <p>Sage-Femme Échographiste</p>
+        <p>Diplômée d'État · Alès</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="#qui-suis-je">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#echographies">Échographies</a>
+        <a href="#infos-pratiques">Infos pratiques</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>19 impasse du Jujubier<br />30100 Alès</p>
+        <a href="tel:+33685185392">{{ .Site.Params.phone }}</a>
+        <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+      </div>
+      <div class="footer-rdv">
+        <h4>Rendez-vous</h4>
+        <p>Prise de rendez-vous en ligne via Doctolib.</p>
+        <a href="{{ .Site.Params.doctolibURL }}" target="_blank" rel="noopener" class="btn btn-primary">Doctolib</a>
+      </div>
+    </div>
+    <div class="footer-diplomes">
+      <h4>Diplômes nationaux et universitaires</h4>
+      <ul>
+        <li>
+          <span class="diplome-year">2025</span>
+          D.U. Prévention et suivi en Gynécologie pour les Sages-Femmes — Faculté de médecine, Université de Montpellier-Nîmes
+        </li>
+        <li>
+          <span class="diplome-year">2021</span>
+          D.I.U. Échographie gynécologique et obstétricale — Faculté de médecine Cochin-Port Royal, Paris 5
+        </li>
+        <li>
+          <span class="diplome-year">2016</span>
+          Diplôme d'État de sage-femme — Université Paris 6 Pierre et Marie Curie, Paris
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} Estelle Wolozyn — Sage-Femme Échographiste. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+{{ end }}

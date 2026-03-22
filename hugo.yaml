@@ -1,0 +1,19 @@
+baseURL: "https://estellewolozyn.fr/"
+languageCode: "fr"
+title: "Estelle Wolozyn — Sage-Femme Échographiste à Alès"
+theme: "estelle"
+
+params:
+  name: "Estelle Wolozyn"
+  title: "Sage-Femme Échographiste"
+  tagline: "J'accompagne les femmes à chaque étape de leur vie, de l'adolescence à la ménopause, avec écoute et bienveillance."
+  address: "19 impasse du Jujubier, 30100 Alès"
+  phone: "06.85.18.53.92"
+  email: "estellewolozyn.sagefemme@gmail.com"
+  googleMapsURL: "https://maps.google.com/?q=19+impasse+du+Jujubier+30100+Alès"
+  doctolibURL: "https://www.doctolib.fr/sage-femme-echographiste/ales/estelle-wolozyn-draveil/booking/new-patient?specialityId=34&source=profile"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
